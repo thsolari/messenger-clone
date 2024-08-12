@@ -6,7 +6,7 @@ import {
     FieldErrors,
     FieldValues,
     UseFormRegister
-} from 'react-hook-form'
+} from 'react-hook-form';
 
 interface InputProps {
     label: string;
@@ -46,8 +46,8 @@ const Input: React.FC<InputProps> = ({
             <div className="mt-2">
                 <input 
                     id={id}
-                    type="type"
-                    autoComplete="id"
+                    type={type}
+                    autoComplete={id}
                     disabled={disabled}
                     {...register(id, { required })}
                     className={clsx(`
@@ -57,7 +57,7 @@ const Input: React.FC<InputProps> = ({
                         rounded-md
                         border-0
                         py-1.5
-                        text-grey-900
+                        text-gray-900
                         shadow-sm
                         ring-1
                         ring-inset
